@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Red Hat Display", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--pale-blue);
+  background-image: url(./images/pattern-background-desktop.svg);
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+button,
+input {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.card-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.card .illustration {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+.card .card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .header {
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.card .description {
+  text-align: center;
+  padding: 1rem;
+  color: var(--desaturated-blue);
+}
+
+.card .plan-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--very-pale-blue);
+  border-radius: 8px;
+}
+
+.card .plan-row .plan-details {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 900;
+  padding-left: 1rem;
+}
+
+.card .plan-row .plan-details .plan-cost {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-top: 4px;
+  color: var(--desaturated-blue);
+}
+
+.card .plan-row .change-plan {
+  text-decoration: underline;
+  color: var(--bright-blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card .plan-row .change-plan:hover {
+  text-decoration: none;
+  color: var(--pale-blue);
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card .card-content .btn-primary {
+  background-color: var(--bright-blue);
+  color: white;
+  margin: 1.5rem;
+  box-shadow: 0px 24px 16px var(--pale-blue);
+}
+
+.card .card-content .btn-primary:hover {
+  background-color: var(--pale-blue);
+}
+
+.card .card-content .btn-secondary {
+  width: auto;
+  color: var(--desaturated-blue);
+}
+
+.card .card-content .btn-secondary:hover {
+  color: var(--dark-blue);
+}
