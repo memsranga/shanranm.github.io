@@ -20,7 +20,16 @@ body {
   font-family: "Red Hat Display", Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--pale-blue);
   background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: repeat-x;
   height: 100vh;
+}
+
+@media screen and (max-width: 375px) {
+  html,
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+  }
 }
 
 h1,
@@ -49,6 +58,16 @@ body {
   align-items: stretch;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 .card-wrapper {
   height: 100%;
   display: flex;
@@ -62,6 +81,22 @@ body {
   width: 400px;
   background-color: white;
   border-radius: 16px;
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card-wrapper {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 300px;
+  }
 }
 
 .card .illustration {
@@ -79,8 +114,8 @@ body {
 
 .card .header {
   color: var(--dark-blue);
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: 900;
+  font-size: 1.75rem;
 }
 
 .card .description {
@@ -101,9 +136,12 @@ body {
 
 .card .plan-row .plan-details {
   flex: 1;
+  padding-left: 1rem;
+}
+
+.card .plan-row .plan-details h3 {
   font-size: 1rem;
   font-weight: 900;
-  padding-left: 1rem;
 }
 
 .card .plan-row .plan-details .plan-cost {
@@ -123,7 +161,7 @@ body {
 
 .card .plan-row .change-plan:hover {
   text-decoration: none;
-  color: var(--pale-blue);
+  color: hsl(245, 75%, 65%);
 }
 
 .btn {
@@ -131,7 +169,7 @@ body {
   padding: 1rem;
   border-radius: 8px;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .card .card-content .btn-primary {
@@ -142,7 +180,7 @@ body {
 }
 
 .card .card-content .btn-primary:hover {
-  background-color: var(--pale-blue);
+  background-color: hsl(245, 75%, 65%);
 }
 
 .card .card-content .btn-secondary {
